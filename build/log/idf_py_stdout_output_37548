@@ -1,0 +1,81 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tamth\Downloads\Embedded_Study\ESP_Proj\Shade_Turner\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/tamth/Downloads/Embedded_Study/ESP_Proj/Shade_Turner/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5160 bytes. 0x2ea0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/Shade_Turner.c.obj
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable Shade_Turner.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/tamth/Downloads/Embedded_Study/ESP_Proj/Shade_Turner/build/Shade_Turner.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tamth\Downloads\Embedded_Study\ESP_Proj\Shade_Turner\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/tamth/Downloads/Embedded_Study/ESP_Proj/Shade_Turner/build/partition_table/partition-table.bin C:/Users/tamth/Downloads/Embedded_Study/ESP_Proj/Shade_Turner/build/Shade_Turner.bin"
+Shade_Turner.bin binary size 0xbdb00 bytes. Smallest app partition is 0x100000 bytes. 0x42500 bytes (26%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5.4\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5.4 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/tamth/Downloads/Embedded_Study/ESP_Proj/Shade_Turner/build -P C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 Shade_Turner.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port COM4
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_1v8)
+Crystal is 40MHz
+MAC: 34:85:18:a5:18:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20832 bytes to 13346...
+Writing at 0x00000000... (100 %)
+Wrote 20832 bytes (13346 compressed) at 0x00000000 in 0.5 seconds (effective 305.8 kbit/s)...
+Hash of data verified.
+Compressed 776960 bytes to 485939...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c60e... (6 %)
+Writing at 0x000252b2... (10 %)
+Writing at 0x0003097d... (13 %)
+Writing at 0x00036c90... (16 %)
+Writing at 0x0003d2a7... (20 %)
+Writing at 0x00043145... (23 %)
+Writing at 0x000491c1... (26 %)
+Writing at 0x0004f14c... (30 %)
+Writing at 0x0005438b... (33 %)
+Writing at 0x00059390... (36 %)
+Writing at 0x0005ec94... (40 %)
+Writing at 0x00064443... (43 %)
+Writing at 0x00069965... (46 %)
+Writing at 0x0006ee65... (50 %)
+Writing at 0x00074a48... (53 %)
+Writing at 0x0007a5ba... (56 %)
+Writing at 0x0007fe2b... (60 %)
+Writing at 0x00085a0c... (63 %)
+Writing at 0x0008b7ab... (66 %)
+Writing at 0x00091118... (70 %)
+Writing at 0x00096e4e... (73 %)
+Writing at 0x0009c8ab... (76 %)
+Writing at 0x000a1e5c... (80 %)
+Writing at 0x000a8ffc... (83 %)
+Writing at 0x000b209f... (86 %)
+Writing at 0x000b7c78... (90 %)
+Writing at 0x000bdd2d... (93 %)
+Writing at 0x000c4656... (96 %)
+Writing at 0x000c99d5... (100 %)
+Wrote 776960 bytes (485939 compressed) at 0x00010000 in 12.7 seconds (effective 488.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 533.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

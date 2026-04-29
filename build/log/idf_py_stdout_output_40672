@@ -1,0 +1,11 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- ccache will be used for faster recompilation
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SC:\Users\tamth\Downloads\Embedded_Study\ESP_Proj\Shade_Turner -BC:\Users\tamth\Downloads\Embedded_Study\ESP_Proj\Shade_Turner\build
